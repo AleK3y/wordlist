@@ -1,0 +1,2 @@
+# wordlist
+🛠️⼁Generate a wordlist

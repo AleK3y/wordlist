@@ -35,6 +35,8 @@ int index_of(char *arr, char item) {
 			return i;
 		}
 	}
+	
+	return -1;
 }
 
 void next_sequence(char *string, char *charlist) {

@@ -49,7 +49,7 @@ void next_sequence(char *string, char *charlist) {
 	// Increase the character at its position
 	string[to_inc] = charlist[index_of(charlist, string[to_inc])+1];
 
-	// Set the rest as the first of the character list
+	// Set the remaining as the first of the character list
 	for(int j=to_inc+1; j<strlen(string); j++) {
 		string[j] = charlist[0];
 	}

@@ -2,7 +2,10 @@
 A simple project I made to exercise with FILE.
 
 ## How to run
-To run the program correctly after compiling you just have to run it with these arguments: \
+First you have to compile the source code: \
+`gcc main.c -lm -o main`
+
+Then, to run the program correctly, you just have to use these arguments: \
 `./main character_list length output_filename`
 
 For example: \

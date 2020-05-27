@@ -46,8 +46,8 @@ void next_sequence(char *string, char *charlist) {
 	*/
 
 	// Find the position of the first (starting from right) increasable character
-	int to_inc;
-	for(to_inc=strlen(string)-1; string[to_inc] == charlist[strlen(charlist)-1]; to_inc--);
+	int to_inc=strlen(string);
+	while(string[--to_inc] == charlist[strlen(charlist)-1]);
 
 	// Increase the character at its position
 	string[to_inc] = charlist[index_of(charlist, string[to_inc])+1];

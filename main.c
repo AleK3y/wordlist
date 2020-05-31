@@ -82,28 +82,28 @@ char *get_size(long int bytes) {
 	char *buffer = alloc_str(10 + 2);		// 10 is for the int part (INT_MAX length) and 2 is for the unit name length
 
 	// TB
-	if(bytes > pow(10, 12)) {
+	if(bytes >= pow(10, 12)) {
 		sprintf(buffer, "%d", (int) (bytes/pow(10, 12)));
 		strcat(buffer, "tb");
 
 	// GB
-	} else if(bytes > pow(10, 9)) {
+	} else if(bytes >= pow(10, 9)) {
 		sprintf(buffer, "%d", (int) (bytes/pow(10, 9)));
 		strcat(buffer, "gb");
 
 	// MB
-	} else if(bytes > pow(10, 6)) {
+	} else if(bytes >= pow(10, 6)) {
 		sprintf(buffer, "%d", (int) (bytes/pow(10, 6)));
 		strcat(buffer, "mb");
 
 	// KB
-	} else if(bytes > pow(10, 3)) {
+	} else if(bytes >= pow(10, 3)) {
 		sprintf(buffer, "%d", (int) (bytes/pow(10, 3)));
 		strcat(buffer, "kb");
 
 	// Bytes
 	} else {
-    	sprintf(buffer, "%d", (int) bytes);
+		sprintf(buffer, "%d", (int) bytes);
 		strcat(buffer, "b");
 	}
 
